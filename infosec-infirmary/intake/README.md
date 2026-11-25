@@ -4,7 +4,7 @@
 
 **Status:** Live · **Type:** Browser-only web app · Part of the InfoSec Infirmary tool suite
 
-> **This is a documentation repository.** It describes what the tool does and how it is designed. It does not contain the product source code, which is private.
+> **This is a documentation repository.**
 
 ## The problem
 
@@ -12,7 +12,7 @@ Most small business owners have no idea how their security actually measures up.
 
 ## What it does
 
-The user answers a short set of questions written in plain language. The tool scores the answers across the six functions of the NIST Cybersecurity Framework and reports a maturity tier for each, along with a visual summary. If the business takes card payments, an extra branch points them toward the right PCI self-assessment path.
+The user answers a short set of questions. The tool scores the answers across the six functions of the NIST Cybersecurity Framework and reports a maturity tier for each, along with a visual summary. If the business takes card payments, an extra branch points them toward the right PCI self-assessment path.
 
 Everything runs on the user's own device. No answers are sent anywhere, because the assessment needs no secrets and no server work.
 
@@ -32,7 +32,7 @@ flowchart TD
     G --> H[Readable report with summary chart]
 ```
 
-## Tech stack (high level)
+## Tech stac
 
 - **Front end:** A component-based JavaScript UI with local state.
 - **Charting:** A charting library renders the per-function summary.
@@ -43,10 +43,6 @@ flowchart TD
 - **NIST Cybersecurity Framework 2.0:** Organizes security into six functions, Govern, Identify, Protect, Detect, Respond, and Recover, each broken into categories and controls.
 - **Maturity tiers:** Describe how mature a practice is, on a ladder from ad hoc to continuously improving, rather than a simple pass or fail.
 - **PCI DSS Self-Assessment Questionnaires:** The compliance path for businesses that handle credit card data, with different questionnaire types depending on how payments are taken.
-
-## What's in this repo
-
-High-level overview, architecture diagram, and design notes. No source code, no question bank, and no scoring internals.
 
 ## Contact
 
