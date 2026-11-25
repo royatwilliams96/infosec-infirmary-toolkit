@@ -1,10 +1,10 @@
 # Imaging — Website Security Scan
 
-> An outside-in scanner that reads the public security signals of a website and explains, in plain language, what is solid and what is weak.
+> An outside-in scanner that reads the public security signals of a website and explains the websites strengths and vulnerabilities.
 
 **Status:** Live · **Type:** Serverless web app · Part of the InfoSec Infirmary tool suite
 
-> **This is a documentation repository.** It describes what the tool does and how it is designed. It does not contain the product source code, which is private.
+> **This is a documentation repository.** 
 
 ## The problem
 
@@ -16,7 +16,7 @@ The user enters a web address. The tool inspects the site's security certificate
 
 Every check is read-only and uses only publicly visible information. The tool never writes to, claims, or exploits anything.
 
-## How it works (high level)
+## How it works 
 
 Browsers are blocked from freely inspecting other sites, so the scanning runs server-side. The main scan reads the certificate, headers, software banners, and email records, then grades them. A separate stage discovers the domain's subdomains from public Certificate Transparency logs and checks each one, read-only, for two cloud problems. Keeping the two stages separate means the cloud discovery can never slow down or break the main report.
 
@@ -35,7 +35,7 @@ flowchart TD
     J & K --> L[Cloud exposure section added to report]
 ```
 
-## Tech stack (high level)
+## Tech stack
 
 - **Front end:** A component-based JavaScript UI that renders the report.
 - **Back end:** Serverless functions do the scanning, because a browser is not allowed to inspect other sites' certificates and headers.
@@ -49,10 +49,6 @@ flowchart TD
 - **Email authentication (SPF, DKIM, DMARC):** DNS records that let the world verify an email really came from the domain, which is what stops business-impersonation fraud.
 - **Certificate Transparency:** Public logs of issued certificates, which double as a near-complete public list of a domain's subdomains.
 - **Subdomain takeover and public storage:** Two common cloud mistakes, a DNS record pointing at a deleted service, and a storage bucket left open to the public.
-
-## What's in this repo
-
-High-level overview, architecture diagram, and the security rationale for each check. No source code, no detection fingerprints, and no scan internals.
 
 ## Contact
 
