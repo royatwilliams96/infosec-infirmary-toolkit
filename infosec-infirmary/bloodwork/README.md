@@ -4,7 +4,7 @@
 
 **Status:** Live · **Type:** Web app with a privacy-preserving lookup · Part of the InfoSec Infirmary tool suite
 
-> **This is a documentation repository.** It describes what the tool does and how it is designed. It does not contain the product source code, which is private.
+> **This is a documentation repository.**
 
 ## The problem
 
@@ -45,10 +45,6 @@ The privacy here is not a promise, it is built into the math of the request.
 - **Hashing:** A one-way function that turns any input into a fixed fingerprint you cannot reverse.
 - **k-anonymity range query:** Sending only a short prefix so the real secret hides in a crowd of possibilities.
 - **Data breaches and credential stuffing:** Why a leak of one site threatens your other accounts, and why the fix is a unique password everywhere plus multi-factor authentication.
-
-## What's in this repo
-
-High-level overview, architecture diagram, and the privacy rationale. No source code.
 
 ## Contact
 
