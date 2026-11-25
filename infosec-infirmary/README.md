@@ -4,7 +4,7 @@
 
 **Live at [infosecinfirmary.com](https://infosecinfirmary.com/)**
 
-> **This is a documentation repository.** It gives a high-level overview of each tool: what problem it solves, how it is designed, and the security thinking behind it. It does not contain the proprietary product source code, which runs a live business and stays private. What it shows is how the suite is built and why each decision was made.
+> **This is a documentation repository.** It gives a high-level overview of each tool: what problem it solves, how it is designed, and the security thinking behind it.
 
 ## The tools
 
@@ -26,10 +26,11 @@ Each tool is named after a step in a medical checkup, because that is how the su
 - **Read-only and in-scope.** The scanning tools only ever read public information and only touch the target the user is authorized to check. They never write, claim, or exploit anything.
 - **Right tool, right place.** Some tools run entirely in the browser because they need no secrets. Others run server-side because a browser is not allowed to do the work. Each choice is deliberate and explained in the tool's overview.
 
-## How these are built (high level)
+## How these are built
 
 The suite shares a common technical foundation: component-based JavaScript front ends, serverless functions for the work a browser cannot do, scheduled jobs for monitoring, and public standards (NIST CSF, TLS, SPF/DKIM/DMARC, the OWASP Top 10 for LLM Applications) as the backbone. The emphasis throughout is on defensive engineering: strict content-security policies, safe rendering, input validation, and failing loudly rather than giving a false all-clear.
 
 ## Contact
 
 Built and maintained by InfoSec Infirmary. Learn more at [infosecinfirmary.com](https://infosecinfirmary.com/).
+
