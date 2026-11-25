@@ -32,7 +32,7 @@ flowchart TD
     G --> H[Readable report with summary chart]
 ```
 
-## Tech stac
+## Tech stack
 
 - **Front end:** A component-based JavaScript UI with local state.
 - **Charting:** A charting library renders the per-function summary.
