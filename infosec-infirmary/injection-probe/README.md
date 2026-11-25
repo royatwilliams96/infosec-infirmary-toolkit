@@ -4,7 +4,8 @@
 
 **Status:** Live · **Type:** Serverless web app · Part of the InfoSec Infirmary tool suite
 
-> **This is a documentation repository.** It describes what the tool does and how it is designed. It does not contain the product source code, the attack library, or the detection internals, which are private.
+> **This is a documentation repository.**
+
 
 ## The problem
 
@@ -16,7 +17,7 @@ With the owner's consent and authorization, the user points the tool at an AI en
 
 The tool only tests a target the user owns or is authorized to test, and it is gated behind an explicit consent step.
 
-## How it works (high level)
+## How it works
 
 The tool is two pieces, which mirrors a basic security boundary. A dashboard in the browser handles the consent gate, setup, and report. A server-side proxy actually sends each attack to the target, so the browser never touches the target directly. The user describes the target's request and response shape once, which is what lets a single tool test almost any AI endpoint.
 
@@ -48,7 +49,7 @@ The tool groups its tests into the categories that map to the OWASP Top 10 for L
 - **Delimiter and format confusion**
 - **Encoding and obfuscation** (hiding the attack so simple filters miss it)
 
-## Tech stack (high level)
+## Tech stack 
 
 - **Front end:** A component-based JavaScript dashboard that holds the run in local state.
 - **Back end:** A serverless proxy function that fires the attacks, so the browser never contacts the target directly.
@@ -64,10 +65,6 @@ The detection logic was rebuilt after I red-teamed the tool against itself and f
 - **Prompt injection:** Crafting input that overrides or extracts a model's instructions.
 - **The system prompt:** The hidden setup text that often holds the keys to the kingdom, which is why protecting it matters.
 - **OWASP Top 10 for LLM Applications:** The industry catalog of these risks.
-
-## What's in this repo
-
-High-level overview, architecture diagram, attack taxonomy, and the security rationale. No source code, no payloads, and no detection markers.
 
 ## Contact
 
